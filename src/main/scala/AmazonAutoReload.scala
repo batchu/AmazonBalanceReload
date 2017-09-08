@@ -11,7 +11,7 @@ object AmazonAutoReload {
 
     val n = 1 //Number of reloads
     val amountPerReload: String = "0.5" //In USD
-    val email = "email" //Amazon email/phone number
+    val email = "username" //Amazon email/phone number
     val password = "password" //Amazon password.
 
 
@@ -64,7 +64,7 @@ object AmazonAutoReload {
 
     val confirmPayment = driver.findElements(By.className("a-alert-content"))
     if (confirmPayment.size() > 0)
-      confirmPaymentDetails(driver, "xyz")
+      confirmPaymentDetails(driver, "xxxx")
 
 
     Thread.sleep(2000)
@@ -76,15 +76,19 @@ object AmazonAutoReload {
 
   def confirmPaymentDetails(driver: WebDriver, card: String): Int = {
     driver.findElement(By.id("asv-payment-edit-link")).click()
-
+    Thread.sleep(2000)
+//    driver.findElement(By.xpath("//*[contains(@id, 'pmts-id')]")).click()
     driver.findElement(By.id("pmts-id-2")).click()
-
+    Thread.sleep(2000)
     driver.findElement(By.id("pmts-id-31")).sendKeys(card)
     Thread.sleep(2000)
 
     driver.findElement(By.id("pmts-id-33-announce")).submit()
     Thread.sleep(2000)
-    driver.findElement(By.id("asv-form-submit")).submit()
+    driver.findElement(By.id("pmts-id-2")).click()
+    Thread.sleep(2000)
+    driver.findElement(By.id("asv-form-submit")).click()
+    return 0
 
   }
 
