@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: org.seleniumhq.selenium:jetty-repacked:9.2.13.v20160825:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.seleniumhq.selenium/jetty-repacked/jars/jetty-repacked-9.2.13.v20160825.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
